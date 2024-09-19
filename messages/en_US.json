@@ -1,0 +1,16 @@
+{
+  "Shortcut": {
+    "register": "register"
+  },
+  "Location": {
+    "zh_CN": "China",
+    "en_US": "US"
+  },
+  "Login": {
+    "login": "login",
+    "logout": "logout"
+  },
+  "LocaleSwitcher": {
+    "switchLocale": "Switch to {locale, select, en_US {English} zh_CN {Chinese} other {Unknown}}"
+  }
+}
