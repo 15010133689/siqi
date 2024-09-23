@@ -13,7 +13,7 @@ const Palette = () => {
                 tbShortcut:'#f5f5f5'
             },
             primary:{
-                ...grey,
+                main:'#3874cb',
                 ...(mode === 'dark' && {main: grey[100]})
             },
             secondary:{

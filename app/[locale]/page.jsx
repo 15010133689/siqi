@@ -1,5 +1,5 @@
 
 const Index = () => {
-  return (<div>nullfda</div>)
+  return null
 }
 export default Index

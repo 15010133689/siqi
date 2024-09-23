@@ -1,6 +1,6 @@
 export default function manifest() {
     return {
-        name: 'Elliot-Shop-Web',
+        name: 'siqi',
         short_name: 'Elliot',
         description: 'Elliot Shop',
         start_url: '/',

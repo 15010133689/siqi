@@ -5,7 +5,7 @@ import logo from '/public/icons/logo.svg'
 import Link from 'next/link'
 import styles from './index.module.css'
 
-const LogoSection = ({sx,to}) => {
+const Logo = ({sx,to}) => {
     return (
         <ButtonBase disableRipple component={Link} href={!to ? '/': to} sx={sx}>
             <Image src={logo} alt={'logo'} className={styles.image}/>
@@ -13,9 +13,9 @@ const LogoSection = ({sx,to}) => {
     )
 }
 
-LogoSection.propTypes = {
+Logo.propTypes = {
     sx: PropTypes.object,
     to: PropTypes.string
 }
 
-export default LogoSection
+export default Logo

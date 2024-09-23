@@ -1,10 +1,12 @@
 "use client"
-
-
+import styles from "./styles.module.css"
+import {Box} from "@mui/material";
 const Home = () => {
-
     return(
-       <div> homemdmdlfkdlafjakl;jfal;jfkla</div>
+       <>
+           <Box className={styles.backStyle}>
+           </Box>
+       </>
     )
 }
 export default Home

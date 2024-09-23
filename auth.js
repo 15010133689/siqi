@@ -4,7 +4,6 @@ import {cookies} from "next/headers";
 
 const login = async (credentials) => {
     try {
-        debugger
         const formData = new FormData()
         formData.append('username',credentials.username)
         formData.append('password',credentials.password)

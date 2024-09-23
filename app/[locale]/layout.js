@@ -6,22 +6,17 @@ import {AppRouterCacheProvider} from "@mui/material-nextjs/v14-appRouter";
 import Providers from "../../lib/store/Providers";
 import ThemeCustom from "components/themes";
 import {NextIntlClientProvider, useMessages} from 'next-intl';
-import {Inter} from 'next/font/google'
 import {WebVitals} from "components/analytics/web-vitals";
 
-const inter = Inter({
-    weight: '900',
-    subsets: ['latin'],
-    display: 'swap'
-})
+
 export const metadata = {
     title: {
-        template: 'Elliot-Shop-Web | %s ',
-        default: 'Elliot-Shop-Web'
+        template: 'siqi | %s ',
+        default: 'siqi'
     },
     description: 'Using Next.js',
     generator: 'Elliot',
-    applicationName: 'elliot-shop-web',
+    applicationName: 'siqi',
     referrer: 'origin-when-cross-origin',
     keywords: ['Next.js', 'React', 'JavaScript', 'Shop'],
     authors: [ { name: 'Elliot', url: 'https://elliot.com' }],
@@ -58,7 +53,7 @@ export default function RootLayout({ authorize,children,params:{locale} }) {
     return (
       <Providers>
           <ThemeCustom>
-              <html lang={locale} className={inter.className}>
+              <html lang={locale}>
               <body>
                   <AppRouterCacheProvider options={{ enableCssLayer: true }}>
                       <SessionProvider session={session}>

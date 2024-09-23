@@ -1,14 +1,11 @@
 {
-  "Shortcut": {
-    "register": "免费注册"
+  "Header": {
+    "home": "主页",
+    "about": "关于"
   },
   "Location": {
     "zh_CN": "中国大陆",
     "en_US": "美国"
-  },
-  "Login": {
-    "login": "登录",
-    "logout": "退出"
   },
   "LocaleSwitcher": {
     "switchLocale": "切换到 {locale, select, en_US {英语} zh_CN {简体中文} 其他 {未知}}"

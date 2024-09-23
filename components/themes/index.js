@@ -1,10 +1,9 @@
 "use client"
-import {createTheme, ThemeProvider} from "@material-ui/core";
 import {useMemo} from "react";
 import ComponentOverrides from "./overrides";
 import Palette from "./palette";
 import Typography from "./typography";
-import {CssBaseline} from "@mui/material";
+import {createTheme, CssBaseline, ThemeProvider} from "@mui/material";
 
 const ThemeCustom = ({children}) =>{
     const themePalette = Palette()

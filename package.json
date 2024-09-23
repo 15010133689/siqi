@@ -11,11 +11,12 @@
   "dependencies": {
     "@emotion/react": "^11.13.3",
     "@emotion/styled": "^11.13.0",
-    "@material-ui/core": "^4.12.4",
+    "@material-ui/icons": "^4.11.3",
     "@mdx-js/loader": "^3.0.1",
     "@mui/icons-material": "^6.1.0",
     "@mui/material": "^6.1.0",
     "@mui/material-nextjs": "^6.1.0",
+    "@mui/material-pigment-css": "^6.1.1",
     "@next/bundle-analyzer": "^14.2.12",
     "@next/mdx": "^14.2.12",
     "@opentelemetry/exporter-trace-otlp-http": "^0.53.0",
@@ -25,6 +26,7 @@
     "@opentelemetry/semantic-conventions": "^1.27.0",
     "@reduxjs/toolkit": "^2.2.7",
     "es6": "^0.0.7",
+    "formik": "^2.4.6",
     "lodash": "^4.17.21",
     "module": "^1.2.5",
     "next": "^14.2.1",
@@ -32,7 +34,10 @@
     "next-fonts": "^1.5.1",
     "next-intl": "^3.11.1",
     "react": "^18",
+    "react-countdown": "^2.3.6",
     "react-dom": "^18",
-    "react-redux": "^9.1.2"
+    "react-redux": "^9.1.2",
+    "react-virtuoso": "^4.10.4",
+    "yup": "^1.4.0"
   }
 }

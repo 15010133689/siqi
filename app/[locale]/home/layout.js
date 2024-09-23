@@ -1,4 +1,6 @@
-import Header from "components/layout/main/header";
+import Header from "components/layout/header";
+import Footer from "components/layout/footer"
+
 export const metadata = {
     title: 'Home',
 }
@@ -7,6 +9,7 @@ const HomeLayout = ({children}) => {
         <>
             <Header />
             {children}
+            <Footer />
         </>
     )
 }
