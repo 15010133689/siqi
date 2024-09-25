@@ -5,7 +5,6 @@ const Home = () => {
     return(
        <>
            <Box className={styles.backStyle}>
-               yihuishan
            </Box>
        </>
     )
