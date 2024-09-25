@@ -7,8 +7,8 @@ import Providers from "../../lib/store/Providers";
 import ThemeCustom from "components/themes";
 import {NextIntlClientProvider, useMessages} from 'next-intl';
 import {WebVitals} from "components/analytics/web-vitals";
-
-
+import Header from "@/components/layout/header";
+import Footer from "@/components/layout/footer";
 export const metadata = {
     title: {
         template: 'siqi | %s ',
@@ -18,15 +18,15 @@ export const metadata = {
     generator: 'Elliot',
     applicationName: 'siqi',
     referrer: 'origin-when-cross-origin',
-    keywords: ['Next.js', 'React', 'JavaScript', 'Shop'],
-    authors: [ { name: 'Elliot', url: 'https://elliot.com' }],
+    keywords: ['Next.js', 'React', 'JavaScript', 'Java'],
+    authors: [ { name: 'Elliot', url: 'http://www.searchsingle.top' }],
     creator: 'Elliot',
     formatDetection: {
         email: false,
         address: false,
         telephone: false,
     },
-    metadataBase: new URL('https://www.elliot.com:4591'),
+    metadataBase: new URL('http://www.searchsingle.top'),
     alternates: {
         canonical: '/',
         languages: {
@@ -40,11 +40,12 @@ export const metadata = {
     verification: {
         google: 'baidu',
         other: {
-            me: ['zhangqingwei804@gmail.com'],
+            me: ['691159453@qq.com'],
         },
     },
     other: {
-        custom: 'Elliot'
+        custom: 'Elliot',
+        'baidu-site-verification': 'codeva-fk435IFxfM',
     }
 }
 export default function RootLayout({ authorize,children,params:{locale} }) {
@@ -59,8 +60,10 @@ export default function RootLayout({ authorize,children,params:{locale} }) {
                       <SessionProvider session={session}>
                           <NextIntlClientProvider locale={locale} messages={messages}>
                            <WebVitals />
-                            {children}
-                            {authorize}
+                              <Header />
+                              {children}
+                              <Footer />
+                              {authorize}
                           </NextIntlClientProvider>
                       </SessionProvider>
                   </AppRouterCacheProvider>

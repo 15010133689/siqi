@@ -26,14 +26,17 @@ const Location = () => {
 
 
     return(
-        <Grid xs={2} md={1} sx={{ml:0,pl:0,mt:'5px'}} onClick={() => setLocationOpen(!locationOpen)}>
-            <TranslateIcon />
+        <>
+            <Grid xs={2} md={1} onClick={() => setLocationOpen(!locationOpen)}>
+                <TranslateIcon />
+            </Grid>
             <Virtuoso
-                style={{display:locationOpen ? 'block': 'none',zIndex:1999,height: "280px",width:'200px',backgroundColor:'#3874cb',position:'absolute',marginTop:'8px',marginLeft:'-8px'}}
+                style={{display:locationOpen ? 'block': 'none',zIndex:1999,height: "200px",width:'200px',backgroundColor:'#3874cb',position:'absolute',marginTop:'8px',marginLeft:'-8px'}}
                 totalCount={locales.length}
                 data={locales}
                 itemContent={(index,area) => renderRow(index,area)}/>
-        </Grid>
+        </>
+
     )
 }
 

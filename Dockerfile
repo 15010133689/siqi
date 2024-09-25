@@ -38,7 +38,7 @@ COPY . .
 ENV NODE_ENV production
 
 #RUN npm install -g npm@10.7.0 --force
-RUN npm install sharp --force
+RUN #npm install sharp --force
 RUN \
   if [ -f package-lock.json ]; then npm run build; \
   else echo "Lockfile not found." && exit 1; \

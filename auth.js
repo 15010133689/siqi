@@ -69,9 +69,10 @@ export const config = {
                 return Response.redirect(new URL("/",request.nextUrl))
             }else if (pathname !== "/" && pathname !== "/home" && pathname.indexOf("/static") ===-1 ) {
                 return isLoggedIn
-            }else if (pathname === "/") {
-                return Response.redirect(new URL("/home",request.nextUrl))
             }
+            // else if (pathname === "/") {
+            //     return Response.redirect(new URL("/home",request.nextUrl))
+            // }
             return true
         },
         async jwt({ token}) {

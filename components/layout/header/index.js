@@ -30,7 +30,7 @@ const Header = () => {
                     </Paper>
                 </Stack>
                 <Stack className={styles.translate}>
-                    <Paper>
+                    <Paper className={styles.location}>
                         <Location />
                     </Paper>
                 </Stack>

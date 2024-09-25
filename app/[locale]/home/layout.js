@@ -7,9 +7,7 @@ export const metadata = {
 const HomeLayout = ({children}) => {
     return(
         <>
-            <Header />
             {children}
-            <Footer />
         </>
     )
 }

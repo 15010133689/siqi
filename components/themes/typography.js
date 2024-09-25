@@ -66,7 +66,8 @@ const Typography = (fontFamily) => ({
         textTransform: 'capitalize'
     },
     location:{
-        textColor:'#fff'
+        color: '#fff',
+        fontSize: '1rem'
     }
 })
 

@@ -2,7 +2,7 @@ export default function manifest() {
     return {
         name: 'siqi',
         short_name: 'Elliot',
-        description: 'Elliot Shop',
+        description: 'Elliot',
         start_url: '/',
         display: 'standalone',
         background_color: '#fff',
