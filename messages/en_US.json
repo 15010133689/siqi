@@ -1,7 +1,9 @@
 {
   "Header": {
     "home": "home",
-    "about": "about"
+    "about": "about",
+    "shop": "shop",
+    "tech stack": "tech stack"
   },
   "Location": {
     "zh_CN": "China",

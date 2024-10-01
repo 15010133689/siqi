@@ -1,7 +1,9 @@
 {
   "Header": {
     "home": "主页",
-    "about": "关于"
+    "about": "关于",
+    "shop": "商城",
+    "tech stack": "技术栈"
   },
   "Location": {
     "zh_CN": "中国大陆",
