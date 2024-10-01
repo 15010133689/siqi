@@ -1,6 +1,6 @@
 "use client"
 import styles from "./styles.module.css"
-import {Box} from "@mui/material";
+import {Box, Typography} from "@mui/material";
 const Home = () => {
     return(
        <>
