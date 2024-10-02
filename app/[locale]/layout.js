@@ -9,6 +9,7 @@ import {NextIntlClientProvider, useMessages} from 'next-intl';
 import {WebVitals} from "components/analytics/web-vitals";
 import Header from "@/components/layout/header";
 import Footer from "@/components/layout/footer";
+
 export const metadata = {
     title: {
         template: 'siqi | %s ',
@@ -56,20 +57,21 @@ export default function RootLayout({ authorize,children,params:{locale} }) {
           <ThemeCustom>
               <html lang={locale}>
               <body>
-                  <AppRouterCacheProvider options={{ enableCssLayer: true }}>
-                      <SessionProvider session={session}>
-                          <NextIntlClientProvider locale={locale} messages={messages}>
-                           <WebVitals />
-                              <Header />
-                              {children}
-                              <Footer />
-                              {authorize}
-                          </NextIntlClientProvider>
-                      </SessionProvider>
-                  </AppRouterCacheProvider>
+              <AppRouterCacheProvider options={{enableCssLayer: true}}>
+                  <SessionProvider session={session}>
+                      <NextIntlClientProvider locale={locale} messages={messages}>
+                          <WebVitals/>
+                          <Header/>
+                          {children}
+                          <Footer/>
+                          {authorize}
+                      </NextIntlClientProvider>
+                  </SessionProvider>
+              </AppRouterCacheProvider>
+              <script src="https://hm.baidu.com/hm.js?ad0edd76d04f479b41d9caaf5923d074"></script>
               </body>
               </html>
           </ThemeCustom>
       </Providers>
-  )
+    )
 }
