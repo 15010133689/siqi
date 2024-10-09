@@ -35,6 +35,7 @@
     "next-auth": "^5.0.0-beta.3",
     "next-fonts": "^1.5.1",
     "next-intl": "^3.11.1",
+    "nuka-carousel": "^8.1.1",
     "react": "^18",
     "react-countdown": "^2.3.6",
     "react-dom": "^18",

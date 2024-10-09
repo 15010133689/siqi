@@ -1,46 +1,69 @@
-'use client'
-import React, { useState, useRef } from 'react'
-import { LuckyWheel } from '@lucky-canvas/react'
-export default function Page() {
-    const [blocks] = useState([
-        { padding: '10px', background: '#869cfa' }
-    ])
-    const [prizes] = useState([
-        { background: '#e9e8fe', fonts: [{ text: '0' }] },
-        { background: '#b8c5f2', fonts: [{ text: '1' }] },
-        { background: '#e9e8fe', fonts: [{ text: '2' }] },
-        { background: '#b8c5f2', fonts: [{ text: '3' }] },
-        { background: '#e9e8fe', fonts: [{ text: '4' }] },
-        { background: '#b8c5f2', fonts: [{ text: '5' }] },
-    ])
-    const [buttons] = useState([
-        { radius: '40%', background: '#617df2' },
-        { radius: '35%', background: '#afc8ff' },
-        {
-            radius: '30%', background: '#869cfa',
-            pointer: true,
-            fonts: [{ text: '开始', top: '-10px' }]
-        }
-    ])
-    const myLucky = useRef()
-    return <div>
-        <LuckyWheel
-            ref={myLucky}
-            width="300px"
-            height="300px"
-            blocks={blocks}
-            prizes={prizes}
-            buttons={buttons}
-            onStart={() => { // 点击抽奖按钮会触发star回调
-                myLucky.current.play()
-                setTimeout(() => {
-                    const index = Math.random() * 6 >> 0
-                    myLucky.current.stop(index)
-                }, 2500)
-            }}
-            onEnd={prize => { // 抽奖结束会触发end回调
-                alert('恭喜你抽到 ' + prize.fonts[0].text + ' 号奖品')
-            }}
-        />
-    </div>
+import {AppBar, Stack, Toolbar,Paper} from "@mui/material";
+import styles from './styles.module.css'
+import {Typography} from "@mui/material";
+import Grid from "@mui/material/Grid2";
+import Location from "@/components/layout/header/location";
+import {useTranslations} from "next-intl";
+import GitHubIcon from '@mui/icons-material/GitHub';
+import Link from "next/link";
+const Header = () => {
+    const tl = useTranslations('Header')
+    return(
+        <AppBar position="static">
+            <Toolbar>
+                <Stack className={styles.links}>
+                    <Grid container spacing={3}>
+                        <Grid md={2}>
+                            <Typography variant={'h4'} component={'a'} href={'/'} className={styles.typography}>
+                                {tl('home')}
+                            </Typography>
+                        </Grid>
+                        <Grid md={2}>
+                            <Typography variant={'h4'} component={'a'} href={process.env.NEXT_PUBLIC_SHOP_DOMAIN} target={'_blank'} className={styles.typography}>
+                                {tl('shop')}
+                            </Typography>
+                        </Grid>
+                        <Grid md={2}>
+                            <Typography variant={'h4'} component={'a'} href={'/'} className={styles.typography}>
+                                {tl('tech stack')}
+                            </Typography>
+                        </Grid>
+                        <Grid md={2}>
+                            <Typography variant={'h4'} component={'a'} href={'/'} className={styles.typography}>
+                                {tl('about')}
+                            </Typography>
+                        </Grid>
+                    </Grid>
+                </Stack>
+                <Stack className={styles.search}>
+                    <Paper >
+                        search
+                    </Paper>
+                </Stack>
+                <Stack className={styles.translate} >
+                    <Grid container spacing={1.5}>
+                        <Grid md={2} className={styles.search}>
+                            <Paper >
+                                search
+                            </Paper>
+                        </Grid>
+                        <Grid md={2}>
+                            <Paper className={styles.location}>
+                                <Location />
+                            </Paper>
+                        </Grid>
+                        <Grid md={2}>
+                            <Paper className={styles.location}>
+                                <Link href="https://github.com/15010133689" target={'_blank'}>
+                                    <GitHubIcon />
+                                </Link>
+                            </Paper>
+                        </Grid>
+                    </Grid>
+                </Stack>
+            </Toolbar>
+        </AppBar>
+    )
 }
+
+export default Header

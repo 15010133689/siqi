@@ -7,8 +7,9 @@ export default function robots() {
                 disallow: ['/private/'],
             },
             {
-                userAgent: ['Applebot', 'Bingbot'],
-                disallow: ['/'],
+                userAgent: ['Applebot', 'Bingbot', 'Baiduspider'],
+                allow: ['/'],
+                disallow: ['/private'],
             },
         ],
         sitemap: 'https://acme.com/sitemap.xml',

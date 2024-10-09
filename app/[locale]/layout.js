@@ -69,6 +69,8 @@ export default function RootLayout({ authorize,children,params:{locale} }) {
                   </SessionProvider>
               </AppRouterCacheProvider>
               <script src="https://hm.baidu.com/hm.js?ad0edd76d04f479b41d9caaf5923d074"></script>
+              <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3419656398355135"
+                      crossOrigin="anonymous"></script>
               </body>
               </html>
           </ThemeCustom>

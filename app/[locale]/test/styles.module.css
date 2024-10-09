@@ -1,0 +1,20 @@
+.typography{
+    background-color: #3874cb;
+    text-decoration: none;
+    color: white;
+    height: 33px;
+}
+.links{
+    width: 40%;
+    height: 100%;
+}
+.search{
+    width: 40%;
+    height: 100%;
+}
+.translate{
+    margin-left: 10px;
+}
+.location{
+    padding: 3px;
+}
